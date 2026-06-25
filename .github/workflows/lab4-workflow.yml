@@ -19,3 +19,8 @@ jobs:
 
         - name: Install Dependencies
           run: npm install
+
+        - name: Publish to Github Registry
+          run: npm publish
+          env:
+            NODE_AUTH_TOKEN : ${{ secrets.GITHUB_TOKEN }}
